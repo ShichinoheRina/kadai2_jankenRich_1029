@@ -22,4 +22,6 @@ https://soundeffect-lab.info/
 - BGMサイト
 https://dova-s.jp/
 - jqueryでcss変える
-https://programmer-life.work/javascript/vanilla-javascript-and-jquery-add-cs
+https://programmer-life.work/javascript/vanilla-javascript-and-jquery-add-css
+- 面白いサイト
+https://goworkship.com/magazine/the-worst-volume-control/

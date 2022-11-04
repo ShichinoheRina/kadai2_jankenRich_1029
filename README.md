@@ -1,4 +1,3 @@
-# kadai2_jankenRich_1029
 # 課題{02} -{じゃんけんアプリ Rich ver.}- 
 
 ## ①課題内容（どんな作品か）
@@ -8,6 +7,7 @@
 ## ②工夫した点・こだわった点
 - 前よりゲーム感増やしました(スタート画面、効果音など)
 - ハートが１個のときだけ点滅するようにしました(やや不具合あり)
+-勝ち＆あいこのとき30％の確率でライフ増えるようにしました。
 
 ## ③難しかった点・次回トライしたいこと(又は機能)
 - htmlの子要素とか孫要素を思ったところに並べるのがすごく難しいです。
@@ -19,5 +19,7 @@
 効果音サイト
 https://commons.nicovideo.jp/search/tag/%E5%8A%B9%E6%9E%9C%E9%9F%B3
 https://soundeffect-lab.info/
+BGMサイト
+https://dova-s.jp/
 jqueryでcss変える
 https://programmer-life.work/javascript/vanilla-javascript-and-jquery-add-css

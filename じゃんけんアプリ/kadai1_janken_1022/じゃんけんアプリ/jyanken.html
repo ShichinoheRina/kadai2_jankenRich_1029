@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="jyanken.css">
+    <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/earlyaccess/kokoro.css" rel="stylesheet" />
+
+    <script>
+        let count = 0;
+        function R_Click(p_janken_r) 
+      {
+        let janken = ['グー','チョキ','パー',];//"janken"のリストを作成します。
+        let janken_r = Math.floor( Math.random() * 3);//Math.random() で乱数を作ります
+        
+
+        let p_janken = ['グー','チョキ','パー'];//"プレイヤーのjanken"のリストを作成します。
+            //勝ち負けの判定
+            if (janken_r === p_janken_r) {
+                Result_end = "あいこです";
+            } else if(p_janken_r === 0 && janken_r === 1) {
+                Result_end = "あなたの【勝ち】";
+            }else if(p_janken_r === 1 && janken_r === 2) {
+                Result_end = "あなたの【勝ち】";
+            }else if(p_janken_r === 2 && janken_r === 0) {
+                Result_end = "あなたの【勝ち】";
+            }else {
+                Result_end = "あなたの【負け】";
+                count += 1;
+                if(count==1){
+                $("#heart-3").remove();
+                }else if(count==2){
+                  $("#heart-2").remove();
+                }else if(count==3){
+                  $("#heart-1").remove();
+                }
+            }
+
+        let view ="";
+        if (janken_r === p_janken_r) {
+                view='<img src ="img/aiko.jpg">';
+            } else if(p_janken_r === 0 && janken_r === 1) {
+              view='<img src ="img/kachi (1).jpg">';
+            }else if(p_janken_r === 1 && janken_r === 2) {
+              view='<img src ="img/kachi (1).jpg">';
+            }else if(p_janken_r === 2 && janken_r === 0) {
+              view='<img src ="img/kachi (1).jpg">';
+            }else {
+              view='<img src ="img/make.jpg">';
+            }
+
+
+              //結果を表示するためのプログラムです
+              document.getElementById("Rejan1").innerHTML = p_janken[p_janken_r] +"を選択しました。ジャンケンの結果は・・・？";
+            document.getElementById("Rejan2").innerHTML = "亜弓は" + janken[janken_r] + Result_end;
+
+            document.getElementById("echo").innerHTML =view
+        
+        
+ 
+         
+            // if (p_janken_r===2 && janken_r===1) {
+            //   $("#heart-3").remove();
+            // } else if(p_janken_r === 0 && janken_r === 2) {
+            //   $("#parent").remove();
+            // }else if(p_janken_r === 1 && janken_r === 0) {
+            //   $("#parent").remove();
+            // }
+
+
+          }
+
+
+        
+    </script>
+
+              
+
+</head>
+
+
+
+<body>
+  <header>
+    <div class="firstimage">
+    <img src="img/kaishi_ayumi (3).png" alt="">
+    <h1 class="syoubu">じゃんけん<br> &emsp;勝負</h1>
+    <img src="img/kaishi_maya (1).png" alt="">
+  </div> 
+  </header>
+  
+      <div class="nanidaso">
+          <div class="maru">
+           <img src="img/nanidaso3 (1).jpg" alt="">
+          </div>   
+        <div class="nanidasotext koe">
+         <p >何を出そうかな？</p>
+       
+      
+      
+        
+         <button onclick="R_Click(0);"> グー</button>
+         <button onclick="R_Click(1);"> チョキ</button>
+         <button onclick="R_Click(2);"> パー</button>
+         <br />
+        </div>
+      </div>
+
+
+          <p id="Rejan1"></p>
+          <p id="Rejan2"></p>
+          <p id=echo></p>
+ 
+
+          <div class="container">
+            <div class="heart-1" id="heart-1"></div>
+            <div class="heart-2" id="heart-2"></div>
+            <div class="heart-3" id="heart-3"></div>
+          </div>
+      
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/test.js"></script>
+</body>
+</html>
